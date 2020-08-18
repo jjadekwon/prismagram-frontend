@@ -3,15 +3,21 @@ import reset from "styled-reset";
 
 export default createGlobalStyle`
     ${reset};
+    @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&family=Open+Sans:wght@300&display=swap');
     * {
-        box=sizing: border-box;
+        box-sizing: border-box;
     }
     body {
-        background-color:${props => props.theme.bgColor};
-        color:${props => props.theme.blackColor};
+        background-color:${(props) => props.theme.bgColor};
+        color:${(props) => props.theme.blackColor};
+        font-size: 14px;
+        font-family: 'Noto Sans KR', sans-serif;
     }
     a {
-        color:${props => props.theme.blueColor};
+        color:${(props) => props.theme.blueColor};
         text-decoration:none;
+    }
+    input:focus {
+        outline: none;
     }
 `;
