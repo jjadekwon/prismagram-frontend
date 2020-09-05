@@ -11,7 +11,7 @@ const LoggedInRoutes = () => (
   <Switch>
     <Route exact path="/" component={Feed} />
     <Route path="/explore" component={Explore} />
-    <Route path="/search" componenet={Search} />
+    <Route path="/search" component={Search} />
     <Route path="/:username" component={Profile} />
   </Switch>
 );
