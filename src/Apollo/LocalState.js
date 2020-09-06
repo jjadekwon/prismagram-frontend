@@ -15,7 +15,8 @@ export const resolvers = {
         },
         logUserOut: (_, __, { cache }) => {
             localStorage.removeItem("token");
-            window.location.reload(); // 전체 페이지 리로드, 모든 cache를 없앰
+            // window.location.reload(); // 전체 페이지 리로드, 모든 cache를 없앰
+            window.location = "/";
             return null;
         }
     }
